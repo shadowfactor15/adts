@@ -7,29 +7,29 @@ CFLAGS=-std=c++14 -c -Wall
 
 list: ListClient.o List.o
 	@printf "\033[33mLinking List ADT...\n\033[0m"
-	g++ ListClient.o List.o -o list.out
+	/usr/local/gcc-8.2/bin/g++-8.2 ListClient.o List.o -o list.out
 	@printf "\nRun by typing 'make run-list'\n"
 
 ListClient.o: ListClient.cpp
 	@printf "\033[36mCompiling List ADT...\n\033[0m"
-	g++ $(CFLAGS) ListClient.cpp
+	/usr/local/gcc-8.2/bin/g++-8.2 $(CFLAGS) ListClient.cpp
 
 List.o: List.cpp
-	g++ $(CFLAGS) List.cpp
+	/usr/local/gcc-8.2/bin/g++-8.2 $(CFLAGS) List.cpp
 
 
 # vector stack
 stackv: StackVclient.o StackV.o
 	@printf "\033[33mLinking Stack ADT (vector implementation)...\n\033[0m"
-	g++ StackVclient.o StackV.o -o stackv.out
+	/usr/local/gcc-8.2/bin/g++-8.2 StackVclient.o StackV.o -o stackv.out
 	@printf "\nRun by typing 'make run-stackv'\n"
 
 StackVclient.o: StackVclient.cpp
 	@printf "\033[36mCompiling Stack ADT (vector implementation)...\n\033[0m"
-	g++ $(CFLAGS) StackVclient.cpp
+	/usr/local/gcc-8.2/bin/g++-8.2 $(CFLAGS) StackVclient.cpp
 
 StackV.o: StackV.cpp
-	g++ $(CFLAGS) StackV.cpp
+	/usr/local/gcc-8.2/bin/g++-8.2 $(CFLAGS) StackV.cpp
 
 
 
@@ -37,30 +37,30 @@ StackV.o: StackV.cpp
 stackl: StackLclient.o StackL.o List.o
 	@printf "\033[33mLinking Stack ADT (List ADT implementation)...\n\033[0m"
 	@printf "\033[1;33mNOTE: This requires the List ADT to be complete\n\033[0m"
-	g++ StackLclient.o StackL.o List.o -o stackl.out
+	/usr/local/gcc-8.2/bin/g++-8.2 StackLclient.o StackL.o List.o -o stackl.out
 	@printf "\nRun by typing 'make run-stackl'\n"
 
 StackLclient.o: StackLclient.cpp
 	@printf "\033[36mCompiling Stack ADT (List ADT implementation)...\n\033[0m"
-	g++ $(CFLAGS) StackLclient.cpp
+	/usr/local/gcc-8.2/bin/g++-8.2 $(CFLAGS) StackLclient.cpp
 
 StackL.o: StackL.cpp
-	g++ $(CFLAGS) StackL.cpp
+	/usr/local/gcc-8.2/bin/g++-8.2 $(CFLAGS) StackL.cpp
 
 
 
 # Linked-list  stack
 stackll: StackLLclient.o StackLL.o
 	@printf "\033[33mLinking Stack ADT (Linked-list implementation)...\n\033[0m"
-	g++ StackLLclient.o StackLL.o -o stackll.out
+	/usr/local/gcc-8.2/bin/g++-8.2 StackLLclient.o StackLL.o -o stackll.out
 	@printf "\nRun by typing 'make run-stackll'\n"
 
 StackLLclient.o: StackLLclient.cpp
 	@printf "\033[36mCompiling Stack ADT (Linked-list implementation)...\n\033[0m"
-	g++ $(CFLAGS) StackLLclient.cpp
+	/usr/local/gcc-8.2/bin/g++-8.2 $(CFLAGS) StackLLclient.cpp
 
 StackLL.o: StackLL.cpp
-	g++ $(CFLAGS) StackLL.cpp
+	/usr/local/gcc-8.2/bin/g++-8.2 $(CFLAGS) StackLL.cpp
 
 
 

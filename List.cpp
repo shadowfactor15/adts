@@ -83,13 +83,36 @@ void List::remove(int k)
 		loc++;
 	    }
 	
-	    delPtr = tmpPtr->link;
+    delPtr = tmpPtr->link;
 	    tmpPtr->link = delPtr->link;
 	  }
 	
 	delete delPtr;
 	num_elements--;
 	}
-	
+
+bool List::isempty()
+{
+    if (size() == 0)
+        return true;
+    else
+        return false;
+}
+
+void List::clear()
+{
+    Node* t;
+    while (isempty()==false)
+        this->remove(1);
+}
+
+int get(int k){
+    Node* tmpPtr;
+    tmpPtr = frontPtr;
+for(int i=1; i<k; i++){
+    tmpPtr = tmpPtr->link;
+    return tmpPtr->data;
+}
+}
 	//Implementations of missing operations
 	

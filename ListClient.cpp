@@ -8,7 +8,7 @@ int main()
 
  List L1, L2;
 
- //Do some stuff with L1, L2, ...
- // ...
+    cout << L1.size();
+ 
 
 }

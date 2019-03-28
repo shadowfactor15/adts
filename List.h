@@ -18,7 +18,10 @@ class List //begin List definition
      void insert(int element, int k);//insert element at location k
      void remove(int k);//remove element at location k
      int size();//return the number of elements in the List
-     
+    bool isempty();// checks if the list is empty
+    void clear();//clears list
+    int get(int k);//gets element
+    
      
      /** MISSING OPERATIONS */
      //... fill in ....
